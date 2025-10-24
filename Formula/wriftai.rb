@@ -5,13 +5,13 @@
 class Wriftai < Formula
   desc "Command-line interface for WriftAI"
   homepage "https://github.com/wriftai/cli"
-  version "0.17.0"
+  version "0.18.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wriftai/cli/releases/download/v0.17.0/wriftai_Darwin_x86_64.tar.gz"
-      sha256 "f59329944bc6915b8433223039097741d900c0663018b4cd520520ad9df8b82a"
+      url "https://github.com/wriftai/cli/releases/download/v0.18.0/wriftai_Darwin_x86_64.tar.gz"
+      sha256 "68a5c8fe322f7379c7dd6c50aaac3fe5416c764e079931b6db8c93d2c3c6f916"
 
       def install
         bin.install "wriftai"
@@ -22,8 +22,8 @@ class Wriftai < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wriftai/cli/releases/download/v0.17.0/wriftai_Darwin_arm64.tar.gz"
-      sha256 "a132fbd13a9d4aa407f1529937347299805c4207f621dab3e9b52886b692f7b6"
+      url "https://github.com/wriftai/cli/releases/download/v0.18.0/wriftai_Darwin_arm64.tar.gz"
+      sha256 "7cc77c559089f955d28f7dbbc695ca356468ba0d20ffff0ebe7e1e78bfc8e122"
 
       def install
         bin.install "wriftai"
@@ -37,8 +37,8 @@ class Wriftai < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wriftai/cli/releases/download/v0.17.0/wriftai_Linux_x86_64.tar.gz"
-      sha256 "2a9e96b7a1b77985a3c5fbb43a10a8c22bae3de19b5a5268ab1e60891607484e"
+      url "https://github.com/wriftai/cli/releases/download/v0.18.0/wriftai_Linux_x86_64.tar.gz"
+      sha256 "62c5af20540794583d335ba84693af9d941ee0acdd41d38ed58ba4f62aaef415"
       def install
         bin.install "wriftai"
 
@@ -48,8 +48,8 @@ class Wriftai < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wriftai/cli/releases/download/v0.17.0/wriftai_Linux_arm64.tar.gz"
-      sha256 "317a151f791cadf005711137a836d7e38712d7108e60e694fef9d294cb5423e7"
+      url "https://github.com/wriftai/cli/releases/download/v0.18.0/wriftai_Linux_arm64.tar.gz"
+      sha256 "fc67c10b135641c348fe7b72abd9a926d3020481e7a971d531be3e33caccf88e"
       def install
         bin.install "wriftai"
 
