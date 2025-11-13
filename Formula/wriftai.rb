@@ -5,13 +5,13 @@
 class Wriftai < Formula
   desc "Command-line interface for WriftAI"
   homepage "https://github.com/wriftai/cli"
-  version "0.29.0"
+  version "0.30.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wriftai/cli/releases/download/v0.29.0/wriftai_Darwin_x86_64.tar.gz"
-      sha256 "a9ebba95827eee33689a73f98d5a7ca2d9c834b5a7269158ef9ff7db98c2bac2"
+      url "https://github.com/wriftai/cli/releases/download/v0.30.0/wriftai_Darwin_x86_64.tar.gz"
+      sha256 "8a14315d5970fa4d2322e1df724fca8ea1a9184719594fba3a1549313fc357a7"
 
       def install
         bin.install "wriftai"
@@ -19,11 +19,12 @@ class Wriftai < Formula
         bash_completion.install "completions/wriftai.bash" => "wriftai"
         zsh_completion.install "completions/_wriftai"
         fish_completion.install "completions/wriftai.fish"
+        man1.install Dir["man/*.1"]
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wriftai/cli/releases/download/v0.29.0/wriftai_Darwin_arm64.tar.gz"
-      sha256 "7bbaf5bdd2c456a0094f992b0e36b3f461e09bade98f5eb0fb99353c54821dfe"
+      url "https://github.com/wriftai/cli/releases/download/v0.30.0/wriftai_Darwin_arm64.tar.gz"
+      sha256 "c60447c32b0bf321f91a0903ffee9a9fdf1e0a1844ec78cc5dd49bfddc0ca277"
 
       def install
         bin.install "wriftai"
@@ -31,31 +32,34 @@ class Wriftai < Formula
         bash_completion.install "completions/wriftai.bash" => "wriftai"
         zsh_completion.install "completions/_wriftai"
         fish_completion.install "completions/wriftai.fish"
+        man1.install Dir["man/*.1"]
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wriftai/cli/releases/download/v0.29.0/wriftai_Linux_x86_64.tar.gz"
-      sha256 "f652d5dc8991d50c0881441dd9103f0b5a9227e95d8677c4265821ba43dc4083"
+      url "https://github.com/wriftai/cli/releases/download/v0.30.0/wriftai_Linux_x86_64.tar.gz"
+      sha256 "5b9777bf94eefb5d52e46d52b123b79892352298795124353bd627d282d9629b"
       def install
         bin.install "wriftai"
 
         bash_completion.install "completions/wriftai.bash" => "wriftai"
         zsh_completion.install "completions/_wriftai"
         fish_completion.install "completions/wriftai.fish"
+        man1.install Dir["man/*.1"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wriftai/cli/releases/download/v0.29.0/wriftai_Linux_arm64.tar.gz"
-      sha256 "060704374b27b4e88facdf548628b623c6d4d510b7ab284d4674fc483233d5d2"
+      url "https://github.com/wriftai/cli/releases/download/v0.30.0/wriftai_Linux_arm64.tar.gz"
+      sha256 "e0be81cf8e3021ad5f3c239c5d18ef2984c3ffd7208cc92082ed7dad41b5604f"
       def install
         bin.install "wriftai"
 
         bash_completion.install "completions/wriftai.bash" => "wriftai"
         zsh_completion.install "completions/_wriftai"
         fish_completion.install "completions/wriftai.fish"
+        man1.install Dir["man/*.1"]
       end
     end
   end
