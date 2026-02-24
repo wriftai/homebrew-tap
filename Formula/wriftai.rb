@@ -5,15 +5,15 @@
 class Wriftai < Formula
   desc "Command-line interface for WriftAI"
   homepage "https://github.com/wriftai/cli"
-  version "0.43.0"
+  version "0.44.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wriftai/cli/releases/download/v0.43.0/wriftai_Darwin_x86_64.tar.gz"
-      sha256 "bdebf96b2d8d25974c4981cb01c0aad00df79b9edb0a2a47c87ce7c973657759"
+      url "https://github.com/wriftai/cli/releases/download/v0.44.0/wriftai_Darwin_x86_64.tar.gz"
+      sha256 "f3da9fa947632543357841a3168a23e55c6685e640d25c51127326a22fc8a0aa"
 
-      def install
+      define_method(:install) do
         bin.install "wriftai"
 
         bash_completion.install "completions/wriftai.bash" => "wriftai"
@@ -23,10 +23,10 @@ class Wriftai < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wriftai/cli/releases/download/v0.43.0/wriftai_Darwin_arm64.tar.gz"
-      sha256 "2dfb19130c88c4bb88762e89f3d24fcc031c84fd1899d5af882bd40056d0ef20"
+      url "https://github.com/wriftai/cli/releases/download/v0.44.0/wriftai_Darwin_arm64.tar.gz"
+      sha256 "ed52731cf343da2f89f71b85268762c7af47fdb82d404f3e5e43580da655eb5a"
 
-      def install
+      define_method(:install) do
         bin.install "wriftai"
 
         bash_completion.install "completions/wriftai.bash" => "wriftai"
@@ -39,9 +39,9 @@ class Wriftai < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wriftai/cli/releases/download/v0.43.0/wriftai_Linux_x86_64.tar.gz"
-      sha256 "f0b781dc7eeb72dbbf911787a6ab86da7405acb4b644f42e999fe1556d7c3e92"
-      def install
+      url "https://github.com/wriftai/cli/releases/download/v0.44.0/wriftai_Linux_x86_64.tar.gz"
+      sha256 "09211e30cfbdce2f0b31a968ecac737c48777335458bcd7f4b9d119f0553243a"
+      define_method(:install) do
         bin.install "wriftai"
 
         bash_completion.install "completions/wriftai.bash" => "wriftai"
@@ -51,9 +51,9 @@ class Wriftai < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wriftai/cli/releases/download/v0.43.0/wriftai_Linux_arm64.tar.gz"
-      sha256 "a20a4e7685fae716d4284fbc2b704b8bb45ccba1d5825c2335c81a5419f0909f"
-      def install
+      url "https://github.com/wriftai/cli/releases/download/v0.44.0/wriftai_Linux_arm64.tar.gz"
+      sha256 "1602bdac0079842562f3c3245c607345b602ba02d1387ef229658de7f889c928"
+      define_method(:install) do
         bin.install "wriftai"
 
         bash_completion.install "completions/wriftai.bash" => "wriftai"
