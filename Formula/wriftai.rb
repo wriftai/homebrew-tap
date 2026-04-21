@@ -5,13 +5,13 @@
 class Wriftai < Formula
   desc "Command-line interface for WriftAI"
   homepage "https://github.com/wriftai/cli"
-  version "0.49.0"
+  version "0.50.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wriftai/cli/releases/download/v0.49.0/wriftai_Darwin_x86_64.tar.gz"
-      sha256 "2cc36281042df111d9da981a409e355e4fdad2a9f03a745bd79c799aa0a5e5b2"
+      url "https://github.com/wriftai/cli/releases/download/v0.50.0/wriftai_Darwin_x86_64.tar.gz"
+      sha256 "191e34a9ad92e26d1d2a136e52cb26554d311d284686cd448909941008d5198d"
 
       define_method(:install) do
         bin.install "wriftai"
@@ -23,8 +23,8 @@ class Wriftai < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wriftai/cli/releases/download/v0.49.0/wriftai_Darwin_arm64.tar.gz"
-      sha256 "9dedf8c315a0ad2b71737b293d1ee3cfcd4ed4828901168bfaf674d671450771"
+      url "https://github.com/wriftai/cli/releases/download/v0.50.0/wriftai_Darwin_arm64.tar.gz"
+      sha256 "bf4936918637658c8de17e0043d827a43f5781f4d01ac0b65e1d500b5c97a2ee"
 
       define_method(:install) do
         bin.install "wriftai"
@@ -39,8 +39,8 @@ class Wriftai < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wriftai/cli/releases/download/v0.49.0/wriftai_Linux_x86_64.tar.gz"
-      sha256 "91d83fbe96a801dc85dcf7d6bdc3e986ac8e5df3a06b11310319c34f68f1e925"
+      url "https://github.com/wriftai/cli/releases/download/v0.50.0/wriftai_Linux_x86_64.tar.gz"
+      sha256 "408e17dc86bdd28a1b59650dfdba953918f01c74a9a21740d7f2df621e726149"
       define_method(:install) do
         bin.install "wriftai"
 
@@ -51,8 +51,8 @@ class Wriftai < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wriftai/cli/releases/download/v0.49.0/wriftai_Linux_arm64.tar.gz"
-      sha256 "42f78dcfa8f7f435b0fb6080630a79d67fa2a99a9a5b00daf0d57477ce624218"
+      url "https://github.com/wriftai/cli/releases/download/v0.50.0/wriftai_Linux_arm64.tar.gz"
+      sha256 "cb4933aa3cef7e07aa68b3a197d94cb3b739dd33074c8c2ebea66b98f26dd516"
       define_method(:install) do
         bin.install "wriftai"
 
